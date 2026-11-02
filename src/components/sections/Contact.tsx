@@ -3,11 +3,12 @@
 import { useState, type FormEvent } from "react"
 import { motion } from "framer-motion"
 import { FiSend, FiMail, FiPhone, FiGithub, FiLinkedin, FiLoader } from "react-icons/fi"
-import emailjs from "@emailjs/browser"
 import toast, { Toaster } from "react-hot-toast"
 import { portfolioData } from "@/lib/data"
 import { SectionHeader } from "@/components/ui/SectionHeader"
 import { fadeLeftVariant, fadeRightVariant } from "@/lib/animations"
+
+const FORM_RECIPIENT = "assemomar201@gmail.com"
 
 export function Contact() {
   const { contact } = portfolioData
@@ -16,7 +17,7 @@ export function Contact() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    if (!form.name || !form.email || !form.message) {
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
       toast.error("Please fill in all fields")
       return
     }
@@ -24,20 +25,27 @@ export function Contact() {
     setLoading(true)
 
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          from_name: form.name,
-          from_email: form.email,
+      const res = await fetch(`https://formsubmit.co/ajax/${FORM_RECIPIENT}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `Portfolio message from ${form.name}`,
+          _template: "table",
+          _captcha: "false",
+          _honey: "",
+          name: form.name,
+          email: form.email,
           message: form.message,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      )
+        }),
+      })
+      const data = await res.json().catch(() => null)
+      if (!res.ok || (data && data.success === "false")) {
+        throw new Error(`FormSubmit rejected: ${res.status}`)
+      }
       toast.success("Message sent! I'll get back to you soon.")
       setForm({ name: "", email: "", message: "" })
     } catch {
-      toast.error("Something went wrong. Please try again.")
+      toast.error("Message failed to send — email me directly instead.", { duration: 6000 })
     } finally {
       setLoading(false)
     }
@@ -94,6 +102,8 @@ export function Contact() {
             onSubmit={handleSubmit}
             className="glass-card p-8 space-y-6"
           >
+            {/* honeypot: bots fill this; humans never see it */}
+            <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
             <div className="focus-glow">
               <label className="block font-tag text-xs uppercase tracking-wider text-muted-foreground mb-2">
                 Name
