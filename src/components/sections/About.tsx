@@ -62,7 +62,7 @@ export function About() {
             <p className="font-mono text-base md:text-lg leading-relaxed text-foreground/90">
               {personal.bio}
             </p>
-            <div className="mt-6 flex gap-4">
+            <div className="mt-6 flex flex-wrap gap-4">
               {["C#", ".NET", "Angular", "React", "TypeScript", "Docker"].map(
                 (skill) => (
                   <span

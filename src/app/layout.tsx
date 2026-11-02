@@ -24,11 +24,12 @@ const spaceMono = Space_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Assem Omar — Full-Stack Engineer",
+  title: "Assem Omar — Full-Stack .NET Engineer",
   description:
-    "Full-Stack Engineer specializing in .NET, Angular, and AI Integration. Clean architecture, production APIs, and SPAs that ship.",
+    "Full-Stack .NET Engineer specializing in ASP.NET Core, Angular, and AI Integration. Two live client deployments, 8+ shipped projects, Clean Architecture that survives review.",
   keywords: [
     ".NET",
+    "ASP.NET Core",
     "Angular",
     "Full-Stack",
     "Software Engineer",
@@ -36,9 +37,9 @@ export const metadata: Metadata = {
     "Assem Omar",
   ],
   openGraph: {
-    title: "Assem Omar — Full-Stack Engineer",
+    title: "Assem Omar — Full-Stack .NET Engineer",
     description:
-      ".NET · Angular · AI Integration. Building production APIs and SPAs.",
+      "ASP.NET Core · Angular · AI Integration. Two live client deployments, 8+ shipped projects.",
     type: "website",
   },
 }

@@ -50,7 +50,7 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl"
+      className="fixed top-4 right-0 left-0 mx-auto z-50 w-[90%] max-w-4xl"
     >
       <nav
         className={cn(

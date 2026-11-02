@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react"
 import { motion } from "framer-motion"
-import { FiSend, FiMail, FiMapPin, FiGithub, FiLinkedin, FiLoader } from "react-icons/fi"
+import { FiSend, FiMail, FiPhone, FiGithub, FiLinkedin, FiLoader } from "react-icons/fi"
 import emailjs from "@emailjs/browser"
 import toast, { Toaster } from "react-hot-toast"
 import { portfolioData } from "@/lib/data"
@@ -47,7 +47,7 @@ export function Contact() {
     { icon: FiMail, label: contact.email, href: `mailto:${contact.email}` },
     { icon: FiLinkedin, label: "linkedin.com/in/assem-omar1", href: contact.linkedin },
     { icon: FiGithub, label: "github.com/Assemom", href: contact.github },
-    { icon: FiMapPin, label: contact.phone, href: `tel:${contact.phone.replace(/\s/g, "")}` },
+    { icon: FiPhone, label: contact.phone, href: `tel:${contact.phone.replace(/\s/g, "")}` },
   ]
 
   return (
