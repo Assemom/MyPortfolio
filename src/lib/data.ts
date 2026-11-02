@@ -103,7 +103,8 @@ export const portfolioData: PortfolioData = {
       featured: true,
       category: "Full-Stack",
       gradient: "from-cyan-500/20 to-violet-600/20",
-      githubUrl: "https://github.com/Assemom",
+      liveUrl: "https://nilechain-frontend.vercel.app/landing",
+      githubUrl: "https://github.com/NileChain",
     },
     {
       title: "Arab River Medical API",
@@ -123,7 +124,7 @@ export const portfolioData: PortfolioData = {
       featured: false,
       category: "Backend",
       gradient: "from-violet-500/20 to-pink-600/20",
-      liveUrl: "https://translexable.io",
+      liveUrl: "https://www.translexable.io/en",
     },
     {
       title: "Sport Club Management System",
@@ -133,7 +134,7 @@ export const portfolioData: PortfolioData = {
       featured: false,
       category: "Full-Stack",
       gradient: "from-blue-500/20 to-violet-600/20",
-      githubUrl: "https://github.com/Assemom",
+      githubUrl: "https://github.com/Assemom/Full-Stack-Project",
     },
     {
       title: "School Management API",
@@ -143,7 +144,7 @@ export const portfolioData: PortfolioData = {
       featured: false,
       category: "Backend",
       gradient: "from-orange-500/20 to-red-600/20",
-      githubUrl: "https://github.com/Assemom",
+      githubUrl: "https://github.com/Assemom/School-Project-Clean-Architecture",
     },
     {
       title: "AdvancedChat — Real-Time Messaging",
@@ -153,7 +154,7 @@ export const portfolioData: PortfolioData = {
       featured: false,
       category: "Full-Stack",
       gradient: "from-cyan-500/20 to-blue-600/20",
-      githubUrl: "https://github.com/Assemom",
+      githubUrl: "https://github.com/Assemom/AdvancedChatApp",
     },
     {
       title: "RAG System — Document Q&A",
@@ -163,7 +164,7 @@ export const portfolioData: PortfolioData = {
       featured: false,
       category: "AI / ML",
       gradient: "from-pink-500/20 to-rose-600/20",
-      githubUrl: "https://github.com/Assemom",
+      githubUrl: "https://github.com/Assemom/Rag-System",
     },
     {
       title: "TravelNest Agency System",
@@ -173,7 +174,7 @@ export const portfolioData: PortfolioData = {
       featured: false,
       category: "Full-Stack",
       gradient: "from-yellow-500/20 to-cyan-600/20",
-      githubUrl: "https://github.com/Assemom",
+      githubUrl: "https://github.com/Assemom/TravelNest-GraduationProject",
     },
   ],
 
@@ -213,6 +214,7 @@ export const portfolioData: PortfolioData = {
   socials: [
     { label: "GitHub", url: "https://github.com/Assemom", icon: "SiGithub" },
     { label: "LinkedIn", url: "https://linkedin.com/in/assem-omar1", icon: "SiLinkedin" },
+    { label: "LeetCode", url: "https://leetcode.com/u/assemomar202/", icon: "SiLeetcode" },
   ],
 
   contact: {

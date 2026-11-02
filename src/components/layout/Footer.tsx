@@ -1,4 +1,5 @@
 import { FiGithub, FiLinkedin } from "react-icons/fi"
+import { SiLeetcode } from "react-icons/si"
 import { portfolioData } from "@/lib/data"
 
 export function Footer() {
@@ -22,6 +23,8 @@ export function Footer() {
             >
               {s.label === "GitHub" ? (
                 <FiGithub className="w-5 h-5" />
+              ) : s.label === "LeetCode" ? (
+                <SiLeetcode className="w-5 h-5" />
               ) : (
                 <FiLinkedin className="w-5 h-5" />
               )}

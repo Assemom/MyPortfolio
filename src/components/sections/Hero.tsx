@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation"
 import { FiDownload, FiArrowDown } from "react-icons/fi"
 import { FiGithub, FiLinkedin } from "react-icons/fi"
+import { SiLeetcode } from "react-icons/si"
 import gsap from "gsap"
 import type { ISourceOptions } from "@tsparticles/engine"
 import Particles from "@tsparticles/react"
@@ -204,6 +205,15 @@ export function Hero() {
                 aria-label="LinkedIn"
               >
                 <FiLinkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://leetcode.com/u/assemomar202/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-[#00F5D4] transition-colors"
+                aria-label="LeetCode"
+              >
+                <SiLeetcode className="w-5 h-5" />
               </a>
             </div>
           </div>
